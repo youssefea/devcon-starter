@@ -29,7 +29,7 @@ contract SuperfluidBoilerPlate {
     function createUpdateDeleteFlow(address _receiver, uint256 _flowRate) external onlyOwner {
         acceptedToken.createFlow(address(this), _receiver, _flowRate, new bytes(0));
         acceptedToken.updateFlow(address(this), _receiver, _flowRate, new bytes(0));
-        acceptedToken.deleteFlow(address(this), _receiver, _flowRate, new bytes(0));
+        //acceptedToken.deleteFlow(address(this), _receiver, _flowRate, new bytes(0));
     }
     
     function instantlyDistribute() external payable onlyOwner  {
