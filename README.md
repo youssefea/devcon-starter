@@ -1,19 +1,26 @@
-## Foundry
+## Superfluid Foundry Boilerplate
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**Superfluid is a Token Infrastructure Protocol which brings Money Streaming and infinitely scalable distributions, through an upgraded version of ERC-20s called Super Tokens**
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This repository consists of:
+- A development environment compatible with [Foundry](https://book.getfoundry.sh/).
+- A boiletplate smart contract `SuperfluidBoilerplate.sol` which allows you to understand the common patterns of writing a smart contract using the SuperTokenV1Library, including creating/updating/deleting flows, as well as managing Distribution Pools
+- A test file `SuperfluidBoilerplate.t.sol` which allows you to deploy the protocol and start running your tests.
 
 ## Documentation
 
-https://book.getfoundry.sh/
+- Superfluid Docs: https://docs.superfluid.finance/
+- Foundry Docs: https://book.getfoundry.sh/
 
 ## Usage
+
+### Install
+
+```shell
+$ forge install
+```
+
+This will install a new branch of the package which contains some experimental functions as well.
 
 ### Build
 
@@ -25,42 +32,4 @@ $ forge build
 
 ```shell
 $ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
 ```
